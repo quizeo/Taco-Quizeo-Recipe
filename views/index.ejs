@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Taco Recipes</title>
+  <link rel="stylesheet" type="text/css" href="/styles/main.css">
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <h1 class="heading">Taco Quizeo Recipe</h1>
+
+  <form action="/recipe" method="POST" class="buttons">
+    <button type="submit" value="chicken" name="choice">🍗</button>
+    <button type="submit" value="beef" name="choice">🥩</button>
+    <button type="submit" value="fish" name="choice">🐟</button>
+  </form>
+  <div id="recipeContainer" class="hidden">
+    <% if(locals.recipe)  {%>
+    <!-- If no recipe yet, show: -->
+    <h2 id="recipeTitle">
+      <%= recipe.name %>
+    </h2>
+    <!-- Else, show the recipe name e.g. <h2>Recipe name</h2>-->
+  
+  <div class="section_box">
+  <section>
+    <h3>Ingredients:</h3>
+    <ul id="ingredientsList">
+      <li><%= recipe.ingredients.protein.name %>, <%= recipe.ingredients.protein.preparation %></li>
+      <li><%= recipe.ingredients.salsa.name %> ,  <%= recipe.ingredients.salsa.spiciness %></li>
+      <li>Every other topping</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Topping</h3>
+    <div class="section_info">
+      <% for (var  i = 0; recipe.ingredients.toppings.length > i; i++){ %>
+      <div >
+    <h3><%=  recipe.ingredients.toppings[i].name %></h3>
+    <p><%= recipe.ingredients.toppings[i].quantity%> </p>
+    <% for (var  x = 0; recipe.ingredients.toppings[i].ingredients.length > x; x++){ %>
+      <p><%=  recipe.ingredients.toppings[i].ingredients[x] %></p>
+        <% } %>
+      </div>
+      <% } %>
+
+    </div>
+  </section>
+
+</div>
+    <% }else { %>
+      <h2>Pick your favourite taco ingredient 👆</h2>
+      <% } %>
+
+
+
+  </div>
+</body>
+
+</html>

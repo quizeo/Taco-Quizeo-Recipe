@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+html {
+  height: 100%;
+}
+body {
+  font-family: "Poppins", serif;
+  margin: 20px;
+  padding: 0;
+  /* background-color: #e26e5c; */
+  background-image: url(../taco_bg.jpg);
+  text-align: center;
+}
+
+.section_box {
+  
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 31px;
+  flex-wrap: wrap;
+}
+.section_box section {
+  
+  max-width: 340px;
+  width: 100%;
+  min-height: 277px;
+  background: #e33a3afc;
+  padding: 20px;
+  color: #fff;
+  border-radius: 32px;
+}
+.section_box section:last-child{
+  max-width: 688px;
+  width: 100%;
+}
+.section_info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.section_box section h3 {
+  
+}
+
+.section_box section p {
+  
+}
+
+h1 {
+  display: inline;
+  font-size: 5rem;
+  text-align: center;
+  color: #6de25cf7;
+  background-color: white;
+  padding: 20px;
+  border-radius: 29px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #e26e5c;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin: 72px 0 0;
+}
+
+button {
+  font-size: 5rem;
+}
+
+.buttons button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 10px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.buttons button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.buttons button img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+#recipeContainer {
+  background-color: #ffffffc9;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 58px 40px;
+  border-radius: 28px;
+}
+
+#recipeTitle {
+  color: #e26e5c;
+}
+
+#ingredientsList {
+  margin: 47px 0 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#ingredientsList li {
+  margin-bottom: 31px;
+  color: #fff;
+}
+
+
+@media (max-width: 1000px) {
+
+  h1 { font-size: 45px; } 
+  .buttons { margin: 76px; flex-wrap: wrap; gap: 20px;}
+}

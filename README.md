@@ -1,7 +1,7 @@
 # Taco-Quizeo-Recipe
 Taco Quizeo Recipe is a website featuring fish, beef, and chicken taco recipes, built with Node.js, Express.js, and EJS, offering dynamic content and sample JSON for structured data.
  
-<strong style="font-weight:bold; display:block; width:100%;">https://zeo-blog.onrender.com</strong>
+<strong style="font-weight:bold; display:block; width:100%;">https://taco-quizeo-recipe.onrender.com/</strong>
 
 
 <div style=" disply:flex; justify-content: center; margin: 0 auto">
